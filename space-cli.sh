@@ -31,11 +31,7 @@ Darwin) target_os="darwin" ;;
 *) target_os="linux" ;;
 esac
 
-if [ $# -eq 0 ]; then
-	space_uri="https://github.com/deta/space-cli/releases/latest/download/space-${target_os}-${target_arch}.zip"
-else
-	space_uri="https://github.com/deta/space-cli/releases/download/${1}/space-${target_os}-${target_arch}.zip"
-fi
+space_uri="https://github.com/deta/space-cli/releases/download/v0.5.0-rc.0/space-${target_os}-${target_arch}.zip"
 
 space_install="${SPACE_INSTALL:-$HOME/.detaspace}"
 bin_dir="$space_install/bin"
